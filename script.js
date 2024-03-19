@@ -24,10 +24,10 @@ document.getElementById('mediaForm').addEventListener('submit', function(e) {
     }
 
     // Pesos pré-definidos
-    var peso1 = 1.5;
-    var peso2 = 1.5;
-    var peso3 = 4.0;
-    var peso4 = 3.0;
+    var peso1 = 2.0;
+    var peso2 = 2.0;
+    var peso3 = 2.0;
+    var peso4 = 4.0;
     var pesoSimulado = 0.5; // Peso máximo para a nota do simulado
 
     // Cálculo da média sem considerar a nota do simulado
