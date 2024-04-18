@@ -63,3 +63,38 @@ button:hover {
     font-weight: bold;
     color: #333;
 }
+.mensagem-sucesso, .mensagem-alerta {
+    padding: 6px;
+    margin-top: 5px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out; /* Suaviza as transições de estilo */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra sutil para profundidade */
+}
+
+.mensagem-sucesso {
+    color: #fff; /* Cor do texto para sucesso */
+    background-color: #28a745; /* Verde Bootstrap */
+}
+
+.mensagem-alerta {
+    color: #fff; /* Cor do texto para alerta */
+    background-color: #dc3545; /* Vermelho Bootstrap */
+}
+
+/* Animação para quando as mensagens aparecem */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.mensagem-sucesso, .mensagem-alerta {
+    animation: slideIn 0.5s ease-out;
+}
