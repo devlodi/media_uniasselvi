@@ -7,18 +7,49 @@ body {
 }
 
 .container {
-    max-width: 340px; /* Ajuste na largura para dispositivos móveis */
+    position: relative; /* Adiciona posicionamento relativo ao container */
+    max-width: 340px;
     margin: auto;
-    background-color: #fd0; /* Cor de fundo amarela */
+    background-color: #fd0;
     padding: 20px;
-    border-radius: 20px; /* Bordas arredondadas */
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2); /* Sombra para efeito de profundidade */
+    border-radius: 20px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
 }
 
 h1 {
-    color: #333; /* Título mais visível */
-    margin-bottom: 30px;
+    display: inline-block; /* Torna o h1 inline para o ícone ficar ao lado */
+    width: calc(100% - 50px); /* Ajusta a largura para dar espaço ao ícone */
 }
+
+#info-icon {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+    font-size: 24px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px; /* Centraliza verticalmente o texto dentro do círculo */
+    text-align: center; /* Centraliza horizontalmente o texto dentro do círculo */
+    border-radius: 50%; /* Cria um círculo perfeito */
+    background-color: #fff; /* Cor de fundo do círculo */
+    box-shadow: 0 0 0 0 rgba(0, 0, 255, 0.7); /* Sombra inicial para a animação */
+    animation: pulse 2s infinite; /* Aplica a animação 'pulse' */
+}
+
+/* Animação que cria um efeito de 'pulso' ao redor do ícone */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(0, 0, 255, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(0, 0, 255, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(0, 0, 255, 0);
+    }
+}
+
 
 .input-group {
     margin-bottom: 20px; /* Mais espaço entre os grupos de entrada */
