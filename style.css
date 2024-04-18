@@ -126,6 +126,55 @@ button:hover {
     }
 }
 
+
+.modal {
+    display: none; /* Escondido por padrão */
+    position: fixed; /* Fica fixo na tela */
+    left: 0;
+    top: 0;
+    width: 100%; /* Largura total */
+    height: 100%; /* Altura total */
+    background-color: rgba(0, 0, 0, 0.7); /* Cor de fundo mais escura para melhor foco no conteúdo */
+    z-index: 1000; /* Garante que fique no topo */
+    overflow-y: auto; /* Permite rolagem se o conteúdo for muito grande */
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto; /* Centraliza verticalmente e horizontalmente */
+    padding: 40px;
+    border: none;
+    width: 50%; /* Largura ajustada para desktops */
+    max-width: 600px; /* Máximo de largura */
+    border-radius: 8px; /* Cantos arredondados */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); /* Sombra mais profunda para maior destaque */
+    transition: transform 0.3s ease-out; /* Transição suave ao abrir */
+}
+
+.close {
+    color: #aaa;
+    position: absolute; /* Posição absoluta no canto superior direito do modal */
+    top: 10px;
+    right: 20px;
+    font-size: 30px; /* Tamanho maior para fácil clique */
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #333; /* Mudança de cor ao passar o mouse ou focar */
+    text-decoration: none;
+    transform: scale(1.1); /* Efeito de escala ao passar o mouse ou focar */
+}
+
+@media screen and (max-width: 768px) {
+    .modal-content {
+        width: 90%; /* Largura mais larga em dispositivos menores */
+        margin: 20% auto; /* Margem maior para dispositivos menores */
+    }
+}
+
+
 .mensagem-sucesso, .mensagem-alerta {
     animation: slideIn 0.5s ease-out;
 }
