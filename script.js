@@ -54,3 +54,31 @@ document.getElementById('nota2').addEventListener('input', calcularMedia);
 document.getElementById('nota3').addEventListener('input', calcularMedia);
 document.getElementById('nota4').addEventListener('input', calcularMedia);
 document.getElementById('notaSimulado').addEventListener('input', calcularMedia);
+
+
+//scripts modal
+
+// Pegando o ícone de interrogação e o modal
+var modal = document.getElementById("modal-info");
+var infoIcon = document.getElementById("info-icon");
+var span = document.getElementsByClassName("close")[0];
+
+// Quando o ícone de interrogação é clicado, abre o modal
+infoIcon.onclick = function() {
+    modal.style.display = "block";
+}
+
+// Quando o usuário clica no "X", fecha o modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+// Se o usuário clicar fora do modal, ele também fecha
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+
+
