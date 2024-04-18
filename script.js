@@ -38,16 +38,15 @@ function calcularMedia() {
 
     document.getElementById('resultado').innerHTML = 'Média: ' + mediaFinal.toFixed(2);
 
-    // Adiciona a mensagem de feedback baseada na média
+    var mensagemElement = document.getElementById('mensagem');
     if (mediaFinal >= 7) {
-        document.getElementById('mensagem').innerHTML = "Booa, bora para próxima!";
-        document.getElementById('mensagem').style.color = "green"; // Cor verde para sucesso
+        mensagemElement.innerHTML = "Booa, bora para próxima!";
+        mensagemElement.className = "mensagem-sucesso"; // Usa classe para estilo
     } else {
-        document.getElementById('mensagem').innerHTML = "Fudeu, vamo correr atrás!";
-        document.getElementById('mensagem').style.color = "red"; // Cor vermelha para alerta
+        mensagemElement.innerHTML = "Fudeu, vamo correr atrás!";
+        mensagemElement.className = "mensagem-alerta"; // Usa classe para estilo
     }
 }
-
 
 // Adiciona o evento de 'input' a todos os campos de nota
 document.getElementById('nota1').addEventListener('input', calcularMedia);
